@@ -60,6 +60,14 @@ public class LoadController {
 
     }
 
+    @DeleteMapping("/{loadId}")
+    public ResponseEntity<String>deleteLoad(@PathVariable Long loadId){
+        loadRepository.deleteById(loadId);
+
+        return new ResponseEntity<>("Deleted Successfully",HttpStatus.OK);
+
+    }
+
 
 
 }
