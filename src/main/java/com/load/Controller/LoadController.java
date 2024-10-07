@@ -47,7 +47,7 @@ public class LoadController {
 
     }
 
-    @PostMapping("/{loadId}")
+    @PutMapping("/{loadId}")
     public ResponseEntity<Load>addLoad(@PathVariable Long loadId,
                                        @RequestBody Load load
                                        ){
